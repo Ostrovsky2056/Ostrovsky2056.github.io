@@ -18,7 +18,7 @@
 
   <url>
     <loc>https://ostrovsky2056.github.io/</loc>
-    <lastmod>2021-04-29</lastmod>
+    <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -26,21 +26,28 @@
   
   <url>
     <loc>https://ostrovsky2056.github.io/tags/hexo/</loc>
-    <lastmod>2021-04-29</lastmod>
+    <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ostrovsky2056.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-04-29</lastmod>
+    <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ostrovsky2056.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2021-04-29</lastmod>
+    <lastmod>2021-04-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ostrovsky2056.github.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -49,14 +56,14 @@
   
   <url>
     <loc>https://ostrovsky2056.github.io/categories/blog/</loc>
-    <lastmod>2021-04-29</lastmod>
+    <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ostrovsky2056.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-04-29</lastmod>
+    <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
