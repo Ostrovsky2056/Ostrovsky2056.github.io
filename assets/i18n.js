@@ -11,6 +11,7 @@
     ["data-zh-cn", null],
     ["data-zh-cn-aria-label", "aria-label"],
     ["data-zh-cn-content", "content"],
+    ["data-zh-cn-alt", "alt"],
   ]) {
     for (const element of document.querySelectorAll(`[${source}]`)) {
       translations.push({

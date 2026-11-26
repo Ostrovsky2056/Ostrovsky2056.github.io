@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ostrovsky2056.github.io/sitemap.xml
