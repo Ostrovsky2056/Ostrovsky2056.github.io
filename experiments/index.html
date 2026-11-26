@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f4f1e9">
   <title data-zh-cn="实验目录 · AI 创作实验室">Experiments · AI Creation Lab</title>
   <link rel="icon" type="image/png" sizes="128x128" href="/assets/favicon.png?v=3">
-  <link rel="stylesheet" href="/assets/site.css?v=8">
+  <link rel="stylesheet" href="/assets/site.css?v=10">
   <script src="/assets/i18n.js?v=4" defer></script>
 </head>
 <body>
@@ -38,23 +38,31 @@
     </div>
   </header>
 
-  <main class="shell content-page" id="main" tabindex="-1">
+  <main class="shell content-page experiments-page" id="main" tabindex="-1">
     <header class="page-intro">
       <h1 class="page-title" data-zh-cn="实验目录">Experiments</h1>
-      <p data-zh-cn="AI 作品和可以直接在浏览器里体验的小工具。">AI artwork and tools you can try in your browser.</p>
+      <p data-zh-cn="在浏览器里体验开源工具，查看示例和源码。">Open-source tools you can try in your browser, with examples and source code.</p>
     </header>
     <div class="index-list">
-      <article class="index-row" id="screenshot-redactor">
-        <h2 lang="en" data-zh-cn="截图脱敏">Screenshot Redactor</h2>
+      <article class="project-card" id="screenshot-redactor" aria-labelledby="redactor-title">
         <div>
-          <p lang="en" data-zh-cn="在浏览器本地自动框选头像、昵称和敏感文字，无需上传截图。支持识别媒体卡片旁的昵称，替换发言人头像后会同步更新已匹配的引用。核对遮挡后可复制脱敏图片或导出 PNG。">Automatically select avatars, nicknames, and sensitive text in your browser. No uploads. Detect names beside media and link cards and replace speaker avatars in messages and matched quotes. Review the masks, then copy the redacted image or export a PNG.</p>
+          <h2 id="redactor-title" lang="en" data-zh-cn="截图脱敏">Screenshot Redactor</h2>
+          <p class="redactor-benefits" id="project-redactor-benefits" data-zh-cn="自动脱敏 · 本地处理 · 无需上传">Automatic redaction · On-device · No uploads</p>
+          <p class="project-description" lang="en" data-zh-cn="自动框选头像、昵称和敏感文字。核对或调整遮挡后，可以复制脱敏图片或导出 PNG。">Automatically select avatars, nicknames, and sensitive text. Review or adjust the masks, then copy the redacted image or export a PNG.</p>
           <div class="page-actions">
-            <a class="text-link" href="https://ostrovsky2056.github.io/screenshot-redactor/" data-zh-cn="打开工具">Open tool</a>
+            <a class="button button-primary" href="https://ostrovsky2056.github.io/screenshot-redactor/"
+              aria-describedby="project-redactor-benefits" data-zh-cn="打开工具">Open tool</a>
             <a class="text-link" href="https://ostrovsky2056.github.io/screenshot-redactor/?example=chat" data-zh-cn="试用示例">Try an example</a>
             <a class="text-link" href="https://github.com/Ostrovsky2056/screenshot-redactor"
               data-zh-cn="项目介绍与源码">Project overview and source</a>
           </div>
         </div>
+        <figure class="project-preview">
+          <img src="/assets/screenshot-redactor-preview.webp" width="620" height="390" loading="lazy" decoding="async"
+            alt="A fictional conversation with replacement avatars and an email address covered by a black mask."
+            data-zh-cn-alt="一段虚构聊天，发言人头像已替换，邮箱地址已被黑色遮挡。">
+          <figcaption data-zh-cn="内置聊天示例的脱敏效果">Redacted output from the built-in chat example</figcaption>
+        </figure>
       </article>
     </div>
   </main>
