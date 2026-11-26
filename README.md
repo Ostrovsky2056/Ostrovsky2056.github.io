@@ -6,7 +6,7 @@ Ostrovsky2056’s lab for AI artwork, open-source browser tools, and notes on ho
 
 ## Projects
 
-- **Screenshot Redactor** detects avatars, nicknames, and sensitive text in your browser. Replace speaker avatars in messages and matched quotes, then copy or export the redacted image. [Open tool](https://ostrovsky2056.github.io/screenshot-redactor/) · [Try an example](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [Project overview and source](https://github.com/Ostrovsky2056/screenshot-redactor)
+- **Screenshot Redactor** automatically detects avatars, nicknames, and sensitive text in your browser with no uploads. Replace speaker avatars in messages and matched quotes, then copy or export the redacted image. [Open tool](https://ostrovsky2056.github.io/screenshot-redactor/) · [Try an example](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [Project overview and source](https://github.com/Ostrovsky2056/screenshot-redactor)
 
 ## Local preview
 

@@ -6,7 +6,7 @@ Ostrovsky2056 的个人实验室，用来发布 AI 作品、开源浏览器工�
 
 ## 项目
 
-- **截图脱敏** 在浏览器本地识别头像、昵称和敏感文字，支持替换发言人头像并同步到已匹配的引用。核对后可复制脱敏图或导出 PNG。[打开工具](https://ostrovsky2056.github.io/screenshot-redactor/) · [试用示例](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [项目介绍与源码](https://github.com/Ostrovsky2056/screenshot-redactor)
+- **截图脱敏** 在浏览器本地自动识别头像、昵称和敏感文字，无需上传。支持替换发言人头像并同步到已匹配的引用，核对后可复制脱敏图或导出 PNG。[打开工具](https://ostrovsky2056.github.io/screenshot-redactor/) · [试用示例](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [项目介绍与源码](https://github.com/Ostrovsky2056/screenshot-redactor)
 
 ## 本地预览
 
