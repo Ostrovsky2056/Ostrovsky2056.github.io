@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Try Screenshot Redactor and other AI Creation Lab projects. Automatically redact screenshots in your browser with no uploads." data-zh-cn-content="在线体验截图脱敏等开源工具。自动识别截图中的隐私信息，全程在浏览器本地处理，无需上传。">
+  <meta name="description" content="Try AI Creation Lab’s browser experiments, including automatic local screenshot redaction and an interactive orbit study." data-zh-cn-content="体验 AI 创作实验室的浏览器工具和互动作品，包括本地自动截图脱敏和轨道实验。">
   <meta name="theme-color" content="#f4f1e9">
   <title data-zh-cn="实验目录 · AI 创作实验室">Experiments · AI Creation Lab</title>
   <link rel="icon" type="image/png" sizes="128x128" href="/assets/favicon.png?v=3">
-  <link rel="stylesheet" href="/assets/site.css?v=10">
+  <link rel="stylesheet" href="/assets/site.css?v=11">
   <script src="/assets/i18n.js?v=4" defer></script>
 </head>
 <body>
@@ -41,28 +41,43 @@
   <main class="shell content-page experiments-page" id="main" tabindex="-1">
     <header class="page-intro">
       <h1 class="page-title" data-zh-cn="实验目录">Experiments</h1>
-      <p data-zh-cn="在浏览器里体验开源工具，查看示例和源码。">Open-source tools you can try in your browser, with examples and source code.</p>
+      <p data-zh-cn="在浏览器里体验开源工具和交互作品。">Open-source tools and interactive work you can try in your browser.</p>
     </header>
-    <div class="index-list">
+    <div class="experiment-gallery">
       <article class="project-card" id="screenshot-redactor" aria-labelledby="redactor-title">
-        <div>
+        <header class="project-heading">
           <h2 id="redactor-title" lang="en" data-zh-cn="截图脱敏">Screenshot Redactor</h2>
-          <p class="redactor-benefits" id="project-redactor-benefits" data-zh-cn="自动脱敏 · 本地处理 · 无需上传">Automatic redaction · On-device · No uploads</p>
+          <a class="button button-primary" href="https://ostrovsky2056.github.io/screenshot-redactor/"
+            aria-describedby="project-redactor-benefits" data-zh-cn="打开工具">Open tool</a>
+        </header>
+        <img class="project-cover" src="/assets/screenshot-redactor-preview.webp" width="620" height="390"
+          alt="Redacted example chat with replacement avatars and an email address covered by a black mask."
+          data-zh-cn-alt="内置聊天示例的脱敏结果，头像已替换，邮箱地址已被黑色遮挡。">
+        <div class="project-details">
+          <p class="redactor-benefits" id="project-redactor-benefits" data-zh-cn="自动脱敏 · 本地处理 · 无需上传">Automatic redaction · On-device processing · No uploads</p>
           <p class="project-description" lang="en" data-zh-cn="自动框选头像、昵称和敏感文字。核对或调整遮挡后，可以复制脱敏图片或导出 PNG。">Automatically select avatars, nicknames, and sensitive text. Review or adjust the masks, then copy the redacted image or export a PNG.</p>
           <div class="page-actions">
-            <a class="button button-primary" href="https://ostrovsky2056.github.io/screenshot-redactor/"
-              aria-describedby="project-redactor-benefits" data-zh-cn="打开工具">Open tool</a>
             <a class="text-link" href="https://ostrovsky2056.github.io/screenshot-redactor/?example=chat" data-zh-cn="试用示例">Try an example</a>
             <a class="text-link" href="https://github.com/Ostrovsky2056/screenshot-redactor"
               data-zh-cn="项目介绍与源码">Project overview and source</a>
           </div>
         </div>
-        <figure class="project-preview">
-          <img src="/assets/screenshot-redactor-preview.webp" width="620" height="390" loading="lazy" decoding="async"
-            alt="A fictional conversation with replacement avatars and an email address covered by a black mask."
-            data-zh-cn-alt="一段虚构聊天，发言人头像已替换，邮箱地址已被黑色遮挡。">
-          <figcaption data-zh-cn="内置聊天示例的脱敏效果">Redacted output from the built-in chat example</figcaption>
-        </figure>
+      </article>
+      <article class="project-card" id="orbit-study" aria-labelledby="orbit-title">
+        <header class="project-heading">
+          <h2 id="orbit-title" lang="en" data-zh-cn="轨道实验">Orbit Study</h2>
+          <a class="button" href="/#orbit-study" data-zh-cn="体验轨道实验">Explore the orbits</a>
+        </header>
+        <img class="project-cover" src="/assets/orbit-study.webp?v=2" width="1440" height="960" decoding="async"
+          alt="Three marked orbits surrounding a black disk with a vermilion center."
+          data-zh-cn-alt="三条带刻度的轨道环绕墨黑圆盘，圆盘中央有一个朱红色圆点。">
+        <div class="project-details">
+          <p class="project-description" lang="en" data-zh-cn="三个节点沿轨道缓慢绕行。移动指针，让轨道随你的动作倾斜。">Three nodes travel around a central core. Move your pointer to tilt the orbits and change your view.</p>
+          <div class="page-actions">
+            <a class="text-link" href="https://github.com/Ostrovsky2056/Ostrovsky2056.github.io/blob/main/assets/orbit-study.js"
+              data-zh-cn="查看源码">View source</a>
+          </div>
+        </div>
       </article>
     </div>
   </main>

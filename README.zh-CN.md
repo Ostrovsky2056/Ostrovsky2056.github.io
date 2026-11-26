@@ -7,6 +7,7 @@ Ostrovsky2056 的个人实验室，用来发布 AI 作品、开源浏览器工�
 ## 项目
 
 - **截图脱敏** 在浏览器本地自动识别头像、昵称和敏感文字，无需上传。支持替换发言人头像并同步到已匹配的引用，核对后可复制脱敏图或导出 PNG。[打开工具](https://ostrovsky2056.github.io/screenshot-redactor/) · [试用示例](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [项目介绍与源码](https://github.com/Ostrovsky2056/screenshot-redactor)
+- **轨道实验** 用 Canvas 绘制围绕核心转动的三条轨道，移动指针可改变视角。[体验轨道实验](https://ostrovsky2056.github.io/#orbit-study) · [查看源码](assets/orbit-study.js)
 
 ## 本地预览
 
@@ -16,25 +17,28 @@ Ostrovsky2056 的个人实验室，用来发布 AI 作品、开源浏览器工�
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | 首页与轨道作品 |
-| `/experiments/` | 项目体验入口、源码和相关记录 |
+| `/` | 主推工具、脱敏前后对比和交互轨道作品 |
+| `/experiments/` | 项目预览、在线体验和源码 |
 | `/notes/` | 制作记录，按发布时间倒序排列 |
 | `/about/` | 实验室简介和站点源码 |
 | `/404.html` | GitHub Pages 的自定义错误页 |
 
 ## 发布项目或记录
 
-- 在 `experiments/index.html` 添加项目。可直接链接到独立站点，也可以在 `experiments/项目名/index.html` 添加详情页，写上简介、体验入口和源码链接。
-- 在 `notes/记录名/index.html` 写制作记录，包含标题、发布日和相关项目的链接（如有）。在 `notes/index.html` 按时间倒序列出记录。
-- 将条目添加到相应页面的 `index-list` 中，发布首个条目时去掉空状态。
+- 在 `experiments/index.html` 的 `experiment-gallery` 中添加项目卡，配上实际预览。可以直接链接到独立站点，也可以在 `experiments/项目名/index.html` 添加详情页。
+- 在 `notes/记录名/index.html` 写制作记录，包含标题、发布日期和相关项目的链接（如有）。在 `notes/index.html` 的 `index-list` 中按时间倒序列出。
 
 ```html
-<article class="index-row">
-  <h2 lang="en" data-zh-cn="中文标题">Project title</h2>
-  <div>
-    <p lang="en" data-zh-cn="用一句话介绍项目。">A short project description.</p>
+<article class="project-card" id="project-name" aria-labelledby="project-name-title">
+  <header class="project-heading">
+    <h2 id="project-name-title" lang="en" data-zh-cn="中文标题">Project title</h2>
+    <a class="button" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
+  </header>
+  <img class="project-cover" src="/assets/project-preview.webp" width="640" height="360"
+    alt="A description of the preview" data-zh-cn-alt="预览图说明">
+  <div class="project-details">
+    <p class="project-description" lang="en" data-zh-cn="用一句话介绍项目。">A short project description.</p>
     <div class="page-actions">
-      <a class="text-link" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
       <a class="text-link" href="https://github.com/your-account/your-project"
          data-zh-cn="源码与说明">Code and README</a>
     </div>

@@ -7,6 +7,7 @@ Ostrovsky2056’s lab for AI artwork, open-source browser tools, and notes on ho
 ## Projects
 
 - **Screenshot Redactor** automatically detects avatars, nicknames, and sensitive text in your browser with no uploads. Replace speaker avatars in messages and matched quotes, then copy or export the redacted image. [Open tool](https://ostrovsky2056.github.io/screenshot-redactor/) · [Try an example](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [Project overview and source](https://github.com/Ostrovsky2056/screenshot-redactor)
+- **Orbit Study** uses Canvas to animate three orbits around a central core. Move your pointer to change the viewing angle. [Explore the orbits](https://ostrovsky2056.github.io/#orbit-study) · [Source code](assets/orbit-study.js)
 
 ## Local preview
 
@@ -16,25 +17,28 @@ Run `python3 -m http.server 8000` from the repository root and open `http://127.
 
 | Path | Contents |
 | --- | --- |
-| `/` | Home page and orbital artwork |
-| `/experiments/` | Project demos, source code, and related notes |
+| `/` | Featured tool, a before-and-after example, and the interactive orbit study |
+| `/experiments/` | Project previews, browser demos, and source code |
 | `/notes/` | Making notes, newest first |
 | `/about/` | Lab introduction and site source |
 | `/404.html` | Custom GitHub Pages error page |
 
 ## Add a project or note
 
-- List projects in `experiments/index.html`. Link directly to a project’s site or add a detail page at `experiments/project-name/index.html` with an introduction, a demo, and source links.
-- Put notes in `notes/note-name/index.html`. Include a title, publication date, and a link to the related project when available. List notes newest first in `notes/index.html`.
-- Add published items to the existing `index-list`. Remove the empty state when publishing the first item in that section.
+- Add project cards to `experiment-gallery` in `experiments/index.html`. Use an actual project preview. Link directly to the project or add a detail page at `experiments/project-name/index.html`.
+- Put notes in `notes/note-name/index.html`. Include a title, publication date, and a link to the related project when available. List notes newest first in `index-list` in `notes/index.html`.
 
 ```html
-<article class="index-row">
-  <h2 lang="en" data-zh-cn="中文标题">Project title</h2>
-  <div>
-    <p lang="en" data-zh-cn="用一句话介绍项目。">A short project description.</p>
+<article class="project-card" id="project-name" aria-labelledby="project-name-title">
+  <header class="project-heading">
+    <h2 id="project-name-title" lang="en" data-zh-cn="中文标题">Project title</h2>
+    <a class="button" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
+  </header>
+  <img class="project-cover" src="/assets/project-preview.webp" width="640" height="360"
+    alt="A description of the preview" data-zh-cn-alt="预览图说明">
+  <div class="project-details">
+    <p class="project-description" lang="en" data-zh-cn="用一句话介绍项目。">A short project description.</p>
     <div class="page-actions">
-      <a class="text-link" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
       <a class="text-link" href="https://github.com/your-account/your-project"
          data-zh-cn="源码与说明">Code and README</a>
     </div>
