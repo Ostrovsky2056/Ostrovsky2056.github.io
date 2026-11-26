@@ -36,8 +36,7 @@ Run `python3 -m http.server 8000` from the repository root and open `http://127.
     <div class="page-actions">
       <a class="text-link" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
       <a class="text-link" href="https://github.com/your-account/your-project"
-         data-zh-cn="源码与说明"
-         data-zh-cn-href="https://github.com/your-account/your-project/blob/main/README.zh-CN.md">Code and README</a>
+         data-zh-cn="源码与说明">Code and README</a>
     </div>
   </div>
 </article>

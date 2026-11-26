@@ -6,7 +6,7 @@ Ostrovsky2056 的个人实验室，用来发布 AI 作品、开源浏览器工�
 
 ## 项目
 
-- **截图脱敏** 在浏览器本地识别头像、昵称和敏感文字，支持替换发言人头像并同步到已匹配的引用。核对后可复制脱敏图或导出 PNG。[打开工具](https://ostrovsky2056.github.io/screenshot-redactor/) · [试用示例](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [项目介绍与源码](https://github.com/Ostrovsky2056/screenshot-redactor/blob/main/README.zh-CN.md)
+- **截图脱敏** 在浏览器本地识别头像、昵称和敏感文字，支持替换发言人头像并同步到已匹配的引用。核对后可复制脱敏图或导出 PNG。[打开工具](https://ostrovsky2056.github.io/screenshot-redactor/) · [试用示例](https://ostrovsky2056.github.io/screenshot-redactor/?example=chat) · [项目介绍与源码](https://github.com/Ostrovsky2056/screenshot-redactor)
 
 ## 本地预览
 
@@ -36,8 +36,7 @@ Ostrovsky2056 的个人实验室，用来发布 AI 作品、开源浏览器工�
     <div class="page-actions">
       <a class="text-link" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
       <a class="text-link" href="https://github.com/your-account/your-project"
-         data-zh-cn="源码与说明"
-         data-zh-cn-href="https://github.com/your-account/your-project/blob/main/README.zh-CN.md">Code and README</a>
+         data-zh-cn="源码与说明">Code and README</a>
     </div>
   </div>
 </article>
