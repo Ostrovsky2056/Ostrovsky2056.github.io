@@ -1,8 +1,10 @@
 (() => {
   const storageKey = "open-projects.language";
   const simplifiedChineseSubtags = new Set(["hans", "cn", "sg", "my"]);
-  const pickerContainer = document.querySelector("[data-language-picker]");
-  const picker = pickerContainer?.querySelector("select");
+  const languageMenu = document.querySelector("[data-language-menu]");
+  const languageTrigger = languageMenu?.querySelector("summary");
+  const languageIndicator = languageMenu?.querySelector("[data-language-indicator]");
+  const languageChoices = languageMenu?.querySelectorAll("[data-language-choice]") ?? [];
   const translations = [];
 
   for (const [source, target] of [
@@ -46,6 +48,15 @@
         element.textContent = value;
       }
     }
+
+    if (languageIndicator) {
+      languageIndicator.lang = language;
+      languageIndicator.textContent = language === "zh-CN" ? "简中" : "EN";
+    }
+
+    for (const option of languageChoices) {
+      option.setAttribute("aria-pressed", String(option.dataset.languageChoice === choice));
+    }
   }
 
   let choice = "auto";
@@ -58,22 +69,49 @@
 
   applyLanguage(choice);
 
-  if (!picker) return;
+  if (!languageTrigger) return;
 
-  picker.value = choice;
-  pickerContainer.hidden = false;
-  picker.addEventListener("change", () => {
-    const selected = picker.value;
-    applyLanguage(selected);
+  languageMenu.hidden = false;
 
-    try {
-      if (selected === "auto") {
-        localStorage.removeItem(storageKey);
-      } else {
-        localStorage.setItem(storageKey, selected);
+  function closeLanguageMenu() {
+    languageMenu.open = false;
+    languageTrigger.focus();
+  }
+
+  for (const option of languageChoices) {
+    option.addEventListener("click", () => {
+      const selected = option.dataset.languageChoice;
+      applyLanguage(selected);
+      closeLanguageMenu();
+
+      try {
+        if (selected === "auto") {
+          localStorage.removeItem(storageKey);
+        } else {
+          localStorage.setItem(storageKey, selected);
+        }
+      } catch {
+        // The selected language still applies to this page.
       }
-    } catch {
-      // The selected language still applies to this page.
+    });
+  }
+
+  languageMenu.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && languageMenu.open) {
+      event.preventDefault();
+      closeLanguageMenu();
+    }
+  });
+
+  languageMenu.addEventListener("focusout", (event) => {
+    if (event.relatedTarget && !languageMenu.contains(event.relatedTarget)) {
+      languageMenu.open = false;
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (languageMenu.open && !languageMenu.contains(event.target)) {
+      languageMenu.open = false;
     }
   });
 })();

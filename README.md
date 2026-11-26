@@ -10,7 +10,7 @@
 
 ## 更新项目目录
 
-在 `index.html` 的项目目录中新增项目卡片。项目发布后，把对应卡片的筹备状态改为「在线使用」和「查看源码」链接。项目可以在独立仓库中启用 GitHub Pages。
+项目发布后，在 `index.html` 的项目目录中加入项目名称、简介、在线地址和源码链接。各项目可以在独立仓库中启用 GitHub Pages。
 
 英文放在 HTML 标签内，简体中文放在同一标签的 `data-zh-cn` 属性中。标题、无障碍标签和页面简介也应提供两种语言。相应属性为 `data-zh-cn`、`data-zh-cn-aria-label` 和 `data-zh-cn-content`。
 
