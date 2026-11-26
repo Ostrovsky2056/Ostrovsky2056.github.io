@@ -1,19 +1,36 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#111710">
-  <title>页面未找到 · Open Projects</title>
+  <title data-zh-cn="页面未找到 · Open Projects">Page not found · Open Projects</title>
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/i18n.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Open Projects home" data-zh-cn-aria-label="Open Projects 首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-label" lang="en">Open Projects</span>
+      </a>
+      <label class="language-picker" data-language-picker hidden>
+        <span class="visually-hidden" data-zh-cn="站点语言">Site language</span>
+        <select>
+          <option value="auto" data-zh-cn="跟随浏览器">Follow browser</option>
+          <option value="en" lang="en">English</option>
+          <option value="zh-CN" lang="zh-CN">简体中文</option>
+        </select>
+      </label>
+    </div>
+  </header>
   <main class="shell error-page">
-    <h1>页面未找到</h1>
-    <p>你可以在首页查看现有的开源项目。</p>
-    <a class="button" href="/">返回项目首页</a>
+    <h1 data-zh-cn="页面未找到">Page not found</h1>
+    <p data-zh-cn="你可以在首页查看现有的开源项目。">Explore the available projects on the home page.</p>
+    <a class="button" href="/" data-zh-cn="返回项目首页">Back to projects</a>
   </main>
 </body>
 </html>

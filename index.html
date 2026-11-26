@@ -1,36 +1,50 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ostrovsky2056 的开源项目目录。发现可以直接在浏览器里使用的小工具，查看在线页面与源码。">
+  <meta name="description" content="Open-source browser tools by Ostrovsky2056. Explore each project online and browse its source code." data-zh-cn-content="Ostrovsky2056 的开源项目目录。发现可以直接在浏览器里使用的小工具，查看在线页面与源码。">
   <meta name="theme-color" content="#111710">
-  <title>Open Projects · 开源项目</title>
+  <title data-zh-cn="Open Projects · 开源项目">Open Projects</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/i18n.js" defer></script>
 </head>
 <body id="top">
-  <a class="skip-link button" href="#main">跳到主要内容</a>
+  <a class="skip-link button" href="#main" data-zh-cn="跳到主要内容">Skip to main content</a>
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="Open Projects 首页">
+      <a class="brand" href="#top" aria-label="Open Projects home" data-zh-cn-aria-label="Open Projects 首页">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-label" lang="en">Open Projects</span>
       </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="#projects">项目目录</a>
-        <a href="https://github.com/Ostrovsky2056">GitHub</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Main navigation" data-zh-cn-aria-label="主导航">
+          <a href="#projects" data-zh-cn="项目目录">Projects</a>
+          <a href="https://github.com/Ostrovsky2056">GitHub</a>
+        </nav>
+        <label class="language-picker" data-language-picker hidden>
+          <span class="visually-hidden" data-zh-cn="站点语言">Site language</span>
+          <select>
+            <option value="auto" data-zh-cn="跟随浏览器">Follow browser</option>
+            <option value="en" lang="en">English</option>
+            <option value="zh-CN" lang="zh-CN">简体中文</option>
+          </select>
+        </label>
+      </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
     <section class="shell hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title">开源工具，<br><span>打开就用。</span></h1>
-        <p>这里收录我做的开源浏览器工具。<br class="hero-break">每个项目独立发布，在线页面和源码从目录进入。</p>
-        <a class="button" href="#projects">浏览项目</a>
+        <h1 id="hero-title"><span data-zh-cn="开源工具，">Open-source tools,</span><br><span class="hero-accent" data-zh-cn="打开就用。">ready to use.</span></h1>
+        <p>
+          <span data-zh-cn="这里收录我做的开源浏览器工具。">A collection of tools that run in your browser.</span><br class="hero-break">
+          <span data-zh-cn="每个项目独立发布，在线页面和源码从目录进入。">Each project has its own site and source repository.</span>
+        </p>
+        <a class="button" href="#projects" data-zh-cn="浏览项目">Browse projects</a>
       </div>
 
       <div class="hero-art" aria-hidden="true">
@@ -52,50 +66,50 @@
     </section>
 
     <section class="shell directory" id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">项目目录</h2>
+      <h2 id="projects-title" data-zh-cn="项目目录">Projects</h2>
 
       <article class="project" id="screenshot-redactor" aria-labelledby="redactor-title">
         <div class="project-copy">
-          <p class="project-status">筹备中</p>
-          <h3 id="redactor-title">截图脱敏</h3>
-          <p class="project-description">发工单、提 Issue 或分享聊天截图前，在浏览器里遮住手机号、邮箱和订单号，再复制或导出图片。</p>
-          <p class="project-release">上线后可在这里打开工具和查看源码。</p>
+          <p class="project-status" data-zh-cn="筹备中">Planned</p>
+          <h3 id="redactor-title" data-zh-cn="截图脱敏">Screenshot Redactor</h3>
+          <p class="project-description" data-zh-cn="发工单、提 Issue 或分享聊天截图前，在浏览器里遮住手机号、邮箱和订单号，再复制或导出图片。">Cover phone numbers, email addresses, and order IDs before sharing a screenshot. Copy or export the redacted image from your browser.</p>
+          <p class="project-release" data-zh-cn="上线后可在这里打开工具和查看源码。">The tool and its source code will be linked here when it launches.</p>
         </div>
 
         <fieldset class="example">
-          <legend class="visually-hidden">截图脱敏效果示例</legend>
+          <legend class="visually-hidden" data-zh-cn="截图脱敏效果示例">Screenshot redaction example</legend>
           <input class="visually-hidden" type="radio" name="redaction-example" id="example-before">
           <input class="visually-hidden" type="radio" name="redaction-example" id="example-after" checked>
           <div class="example-controls">
-            <span>效果示例</span>
+            <span data-zh-cn="效果示例">Example</span>
             <div class="example-switch">
-              <label for="example-before">脱敏前</label>
-              <label for="example-after">脱敏后</label>
+              <label for="example-before" data-zh-cn="脱敏前">Before</label>
+              <label for="example-after" data-zh-cn="脱敏后">After</label>
             </div>
           </div>
           <div class="example-window">
             <div class="example-window-header">
               <span class="example-file-icon" aria-hidden="true"></span>
-              <strong>反馈工单</strong>
+              <strong data-zh-cn="反馈工单">Support ticket</strong>
             </div>
             <dl class="example-fields">
               <div>
-                <dt>邮箱</dt>
+                <dt data-zh-cn="邮箱">Email</dt>
                 <dd>
                   <span class="example-value">demo@example.com</span>
-                  <span class="example-mask"><span class="visually-hidden">已遮挡</span></span>
+                  <span class="example-mask"><span class="visually-hidden" data-zh-cn="已遮挡">Redacted</span></span>
                 </dd>
               </div>
               <div>
-                <dt>订单号</dt>
+                <dt data-zh-cn="订单号">Order ID</dt>
                 <dd>
                   <span class="example-value">DEMO-0428</span>
-                  <span class="example-mask example-mask-short"><span class="visually-hidden">已遮挡</span></span>
+                  <span class="example-mask example-mask-short"><span class="visually-hidden" data-zh-cn="已遮挡">Redacted</span></span>
                 </dd>
               </div>
               <div>
-                <dt>说明</dt>
-                <dd>附件预览无法打开</dd>
+                <dt data-zh-cn="说明">Details</dt>
+                <dd data-zh-cn="附件预览无法打开">The attachment preview fails to open.</dd>
               </div>
             </dl>
           </div>
@@ -107,7 +121,7 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <span>Open Projects · Ostrovsky2056</span>
-      <a href="https://github.com/Ostrovsky2056/Ostrovsky2056.github.io">本站源码</a>
+      <a href="https://github.com/Ostrovsky2056/Ostrovsky2056.github.io" data-zh-cn="本站源码">Site source</a>
     </div>
   </footer>
 </body>
