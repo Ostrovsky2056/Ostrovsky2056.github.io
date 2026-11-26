@@ -11,38 +11,36 @@ Ostrovsky2056 的个人实验室，用来发布 AI 作品、开源浏览器工�
 
 ## 本地预览
 
-在仓库根目录运行 `python3 -m http.server 8000`，然后打开 `http://127.0.0.1:8000/`。
+将 `screenshot-redactor` 仓库与本站仓库放在同一目录下。在本站运行 `python3 scripts/preview.py`，打开 `http://127.0.0.1:8785/`。预览将首页和脱敏工具放在同一站点，支持在首页拖入截图并自动进入工具识别。
 
 ## 站点结构
 
 | 路径 | 内容 |
 | --- | --- |
-| `/` | 主推工具、脱敏前后对比和交互轨道作品 |
-| `/experiments/` | 项目预览、在线体验和源码 |
-| `/notes/` | 制作记录，按发布时间倒序排列 |
-| `/about/` | 实验室简介和站点源码 |
+| `/` | 截图工作台、三步脱敏示例、工具索引和互动轨道作品 |
+| `/experiments/` | 工具与作品的预览、在线体验和源码 |
+| `/notes/` | 使用指南、示例结果和制作记录 |
+| `/about/` | 本地处理说明和站点源码 |
 | `/404.html` | GitHub Pages 的自定义错误页 |
 
 ## 发布项目或记录
 
 - 在 `experiments/index.html` 的 `experiment-gallery` 中添加项目卡，配上实际预览。可以直接链接到独立站点，也可以在 `experiments/项目名/index.html` 添加详情页。
-- 在 `notes/记录名/index.html` 写制作记录，包含标题、发布日期和相关项目的链接（如有）。在 `notes/index.html` 的 `index-list` 中按时间倒序列出。
+- 简短指南可写在 `notes/index.html`，较长的制作记录放在 `notes/记录名/index.html`。附上相关项目和复现时用到的示例。
 
 ```html
 <article class="project-card" id="project-name" aria-labelledby="project-name-title">
-  <header class="project-heading">
-    <h2 id="project-name-title" lang="en" data-zh-cn="中文标题">Project title</h2>
-    <a class="button" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
-  </header>
-  <img class="project-cover" src="/assets/project-preview.webp" width="640" height="360"
-    alt="A description of the preview" data-zh-cn-alt="预览图说明">
   <div class="project-details">
+    <h2 id="project-name-title" lang="en" data-zh-cn="中文标题">Project title</h2>
     <p class="project-description" lang="en" data-zh-cn="用一句话介绍项目。">A short project description.</p>
     <div class="page-actions">
+      <a class="button" href="https://example.org/" data-zh-cn="在线使用">Use in browser</a>
       <a class="text-link" href="https://github.com/your-account/your-project"
          data-zh-cn="源码与说明">Code and README</a>
     </div>
   </div>
+  <img class="project-cover" src="/assets/project-preview.webp" width="640" height="400"
+    alt="A description of the preview" data-zh-cn-alt="预览图说明">
 </article>
 ```
 
